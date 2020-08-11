@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^vip-sama.com$ [NC,OR]     
+RewriteCond %{HTTP_HOST} ^www.vip-sama.com$      
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
+
+
